@@ -48,4 +48,6 @@ public class TodoService {
     public List<Todo> getTodosByDueDate(LocalDate date){
         return repo.findByDueDate(date);
     }
+
+    public List<Todo> getByPriority(String priority){ return repo.findByPriority(priority); }
 }

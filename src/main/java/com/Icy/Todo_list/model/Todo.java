@@ -22,11 +22,12 @@ public class Todo {
     private String description;
     private boolean completed;
     private LocalDate dueDate;
-
-    public Todo(String title, String description, LocalDate dueDate){
+    private String priority;
+    public Todo(String title, String description, LocalDate dueDate, String priority){
         this.title = title;
         this.description = description;
         this.dueDate = dueDate;
         completed = false;
+        this.priority = priority;
     }
 }
