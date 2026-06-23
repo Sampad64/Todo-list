@@ -55,4 +55,9 @@ public class TodoController {
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date){
         return todoService.getTodosByDueDate(date);
     }
+
+    @GetMapping("/priority/{priority}")
+    public List<Todo> getByPriority(@PathVariable String priority){
+        return todoService.getByPriority(priority);
+    }
 }
